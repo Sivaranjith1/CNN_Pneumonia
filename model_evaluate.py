@@ -21,7 +21,7 @@ Y = np.array(pickle.load(open("Y_test.pickle", "rb")))
 X = X/255.0
 
 # %%
-model = tf.keras.models.load_model('logs/checkpoint-5/64-32-Pneumonia-cnn-0-0.5.model')
+model = tf.keras.models.load_model('64-32-Pneumonia-cnn.h5')
 
 # %%
 model.summary()
@@ -31,6 +31,6 @@ model.evaluate(X, Y,
     batch_size=64, callbacks=[tensorboard])
 
 # %%
-model.save("64-32-Pneumonia-cnn.model")
+model.save("64-32-Pneumonia-cnn.h5")
 
 # %%
