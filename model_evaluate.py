@@ -34,3 +34,15 @@ model.evaluate(X, Y,
 model.save("64-32-Pneumonia-cnn.h5")
 
 # %%
+import cv2
+import os
+import numpy as np
+IMG_SIZE = 60
+#%%
+path_for_image = os.path.dirname(os.path.abspath(__file__)) +'\\img\\pneumonia.jpeg'
+img_array = cv2.imread(path_for_image, cv2.IMREAD_GRAYSCALE)
+new_array = cv2.resize(img_array, (IMG_SIZE, IMG_SIZE))
+out = model.predict(np.array(new_array).reshape(-1, IMG_SIZE, IMG_SIZE, 1))
+print(out)
+
+# %%

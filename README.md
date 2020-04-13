@@ -1,1 +1,1 @@
-# CNN_Pneumonia
+# CNN Pneumonia
