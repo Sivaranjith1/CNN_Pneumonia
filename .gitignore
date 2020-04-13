@@ -1,0 +1,7 @@
+data/
+X.pickle
+Y.pickle
+X_test.pickle
+Y_test.pickle
+models/
+logs/
